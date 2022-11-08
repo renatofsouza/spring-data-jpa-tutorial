@@ -9,6 +9,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import javax.transaction.Transactional;
 
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
@@ -31,5 +33,11 @@ class CourseMaterialRepositoryTest {
                         .build();
         //courseRepository.save(course);
         courseMaterialRepository.save(courseMaterial);
+    }
+
+    @Test
+    public void printAllCourseMaterials(){
+        List<CourseMaterial> courseMaterials = courseMaterialRepository.findAll();
+        System.out.println("courseMaterials = " + courseMaterials);
     }
 }
