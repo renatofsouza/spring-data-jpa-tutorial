@@ -35,4 +35,5 @@ public class CourseMaterial {
     )
     private Course course;
 
+
 }
